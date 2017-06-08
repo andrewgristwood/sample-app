@@ -3,7 +3,7 @@ require 'pathname'
 require 'fileutils'
 include FileUtils
 
-# path to your application root.
+# path to your application.html.erb root.
 APP_ROOT = Pathname.new File.expand_path('../../', __FILE__)
 
 def system!(*args)
@@ -24,6 +24,6 @@ chdir APP_ROOT do
   puts "\n== Removing old logs and tempfiles =="
   system! 'bin/rails log:clear tmp:clear'
 
-  puts "\n== Restarting application server =="
+  puts "\n== Restarting application.html.erb server =="
   system! 'bin/rails restart'
 end
